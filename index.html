@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PetEscolha — Guias e Reviews de Produtos para Pets</title>
+<meta name="description" content="Reviews e guias de produtos para cães e gatos: ração, higiene, conforto e passeio. Escolha certo sem gastar a mais.">
+<meta name="theme-color" content="#0d9488">
+<meta property="og:title" content="PetEscolha — a escolha certa para o seu pet">
+<meta property="og:description" content="Guias, reviews e comparativos de produtos para cães e gatos.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='5' fill='%230d9488'/><circle cx='12' cy='16.5' r='4.5' fill='white'/><circle cx='6' cy='10.5' r='2' fill='white'/><circle cx='18' cy='10.5' r='2' fill='white'/><circle cx='9' cy='6' r='1.9' fill='white'/><circle cx='15' cy='6' r='1.9' fill='white'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--bg:#fff;--fg:#111827;--mu:#6b7280;--bd:#e6e8ec;--cd:#f8f9fb;--ac:#0d9488;--am:#d97706}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1116;--fg:#e7e9ee;--mu:#9aa2b1;--bd:#242833;--cd:#161a21}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 Inter,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.w{max-width:1060px;margin:0 auto;padding:0 18px}
+.hd{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--bd);z-index:9}
+.hd .w{display:flex;align-items:center;justify-content:space-between;height:62px;gap:10px}
+.br{display:flex;align-items:center;gap:8px;font-weight:600;font-size:17px;cursor:pointer}
+.br svg{color:var(--ac)}
+.nv{display:flex;gap:2px}
+.nv a{padding:7px 11px;border-radius:8px;font-size:13.5px;color:var(--mu);cursor:pointer}
+.nv a.on{background:var(--ac);color:#fff}
+.bg{display:none;background:none;border:1px solid var(--bd);border-radius:8px;padding:7px 11px;color:var(--fg)}
+h1{font-size:clamp(26px,7vw,40px);font-weight:600;line-height:1.15;margin:8px 0 12px;letter-spacing:-.02em}
+h2{font-size:clamp(20px,4.5vw,26px);font-weight:600;margin:6px 0 10px}
+h3{font-size:15.5px;font-weight:500;margin-bottom:4px}
+p{color:var(--mu)}
+.eb{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);font-weight:500}
+.s{padding:44px 0;border-bottom:1px solid var(--bd)}
+.bt{display:inline-flex;gap:8px;align-items:center;background:var(--ac);color:#fff;padding:11px 18px;border-radius:10px;font-size:14px;font-weight:500;cursor:pointer;border:0;font-family:inherit}
+.bt.gh{background:none;border:1px solid var(--bd);color:var(--fg)}
+.bt.am{background:var(--am)}
+.gd{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:16px;margin-top:16px}
+.cd{border:1px solid var(--bd);border-radius:13px;padding:16px;background:var(--cd);display:flex;flex-direction:column;gap:8px}
+.pc{height:105px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:32px}
+.ds{font-size:10px;text-transform:uppercase;letter-spacing:.06em;background:var(--am);color:#fff;padding:3px 8px;border-radius:20px;align-self:flex-start}
+.st{color:var(--am);font-size:13px;letter-spacing:1px}
+.pr{font-size:18px;font-weight:600}
+.tg{font-size:11px;color:var(--mu);border:1px solid var(--bd);padding:2px 9px;border-radius:20px;align-self:flex-start}
+.mt{text-align:center;padding:16px 8px;border:1px solid var(--bd);border-radius:13px;background:var(--cd)}
+.mt b{display:block;font-size:20px;color:var(--ac)}
+.mt span{font-size:11px;color:var(--mu)}
+.ad{border:1px dashed var(--bd);border-radius:11px;padding:14px;text-align:center;color:var(--mu);font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin:22px 0;background:var(--cd)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px}
+th,td{text-align:left;padding:11px;border-bottom:1px solid var(--bd)}
+th{font-size:10.5px;text-transform:uppercase;color:var(--mu);font-weight:500;background:var(--cd)}
+input,textarea{width:100%;padding:11px;border-radius:9px;border:1px solid var(--bd);background:var(--bg);color:var(--fg);font:14px Inter,sans-serif}
+.ns{border:1px solid var(--bd);border-radius:13px;padding:20px;background:var(--cd);display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.ns input{flex:1;min-width:170px}
+.nt{font-size:12.5px;color:var(--mu);border-left:2px solid var(--ac);padding-left:12px;margin-top:14px}
+.rw{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--bd);font-size:14px}
+.ft{border-top:1px solid var(--bd);padding:32px 0;color:var(--mu);font-size:12.5px}
+.ft a{cursor:pointer;margin-right:14px}
+@media(max-width:760px){.nv{position:absolute;top:62px;left:0;right:0;background:var(--bg);flex-direction:column;padding:8px 18px 14px;border-bottom:1px solid var(--bd);display:none}.nv.on{display:flex}.bg{display:block}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="w">
+<div class="br" onclick="go('#/')"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><circle cx="12" cy="16.5" r="4.5"/><circle cx="6" cy="10.5" r="2"/><circle cx="18" cy="10.5" r="2"/><circle cx="9" cy="6" r="1.9"/><circle cx="15" cy="6" r="1.9"/></svg> PetEscolha</div>
+<button class="bg" onclick="document.getElementById('nv').classList.toggle('on')"><i class="fa-solid fa-bars"></i></button>
+<nav class="nv" id="nv"></nav>
+</div></header>
+<main id="v"></main>
+<footer class="ft"><div class="w">
+<p style="margin-bottom:10px"><strong style="color:var(--fg)">PetEscolha</strong> — reviews e guias de produtos para cães e gatos.</p>
+<p style="margin-bottom:12px">Aviso de afiliados: ganhamos comissão por compras feitas pelos nossos links, sem custo extra para você.</p>
+<a onclick="go('#/sobre')">Sobre</a><a onclick="go('#/privacidade')">Privacidade</a><a onclick="go('#/contato')">Contato</a>
+<p style="margin-top:12px">© <span id="ano"></span> PetEscolha</p>
+</div></footer>
+<script>
+const L={amz:'https://www.amazon.com.br',ml:'https://www.mercadolivre.com.br'};
+const N=[['#/','Início'],['#/reviews','Reviews'],['#/guias','Guias'],['#/comparar','Comparar'],['#/contato','Contato']];
+const P=[
+{t:'Ração super premium para cães adultos',k:'Alimentação',i:'fa-bone',c:'#0d9488',v:4.8,p:'R$ 189,90',r:'Alta proteína, sem corantes e com ômega 3 e 6 para a pelagem.',d:1,l:'amz'},
+{t:'Ração natural para gatos castrados',k:'Alimentação',i:'fa-cat',c:'#0f766e',v:4.7,p:'R$ 149,90',r:'Controle de pH urinário e baixo teor de magnésio.',l:'ml'},
+{t:'Comedouro automático programável',k:'Alimentação',i:'fa-bowl-food',c:'#0891b2',v:4.6,p:'R$ 229,00',r:'Até 4 refeições por dia com porção ajustável.',l:'amz'},
+{t:'Fonte de água circulante com filtro',k:'Hidratação',i:'fa-droplet',c:'#0284c7',v:4.5,p:'R$ 139,90',r:'Água em movimento e filtrada aumenta a ingestão hídrica.',l:'ml'},
+{t:'Coleira antipulgas 8 meses',k:'Higiene',i:'fa-shield-halved',c:'#7c3aed',v:4.7,p:'R$ 79,90',r:'Proteção contínua, resistente à água e sem cheiro forte.',l:'amz'},
+{t:'Escova removedora de pelos',k:'Higiene',i:'fa-brush',c:'#9333ea',v:4.4,p:'R$ 49,90',r:'Remove os pelos soltos com um clique de limpeza.',d:1,l:'ml'},
+{t:'Cama ortopédica lavável',k:'Conforto',i:'fa-couch',c:'#c2410c',v:4.6,p:'R$ 179,00',r:'Espuma densa, capa removível e base antiderrapante.',l:'amz'},
+{t:'Caixa de transporte para voo',k:'Passeio',i:'fa-suitcase',c:'#4b5563',v:4.5,p:'R$ 259,00',r:'Grades de aço, portas duplas e travas homologadas.',l:'ml'},
+{t:'Peitoral ergonômico com guia',k:'Passeio',i:'fa-shoe-prints',c:'#16a34a',v:4.5,p:'R$ 89,90',r:'Distribui a tração no peito e alivia a traqueia.',l:'amz'},
+{t:'Tapete higiênico (30 un.)',k:'Higiene',i:'fa-layer-group',c:'#0d9488',v:4.3,p:'R$ 69,90',r:'Gel superabsorvente e neutralizador de odor.',d:1,l:'amz'}
+];
+const G=[
+{t:'Como escolher a ração ideal',k:'Alimentação',m:'8 min',r:'Proteína, idade, porte e custo por quilo: o método em 5 passos.'},
+{t:'Primeiros 30 dias com um filhote',k:'Filhotes',m:'10 min',r:'Rotina, vacinas e o que comprar antes de trazê-lo para casa.'},
+{t:'Castração: quando fazer',k:'Saúde',m:'6 min',r:'Idade recomendada, pós-operatório e mitos comuns.'},
+{t:'Eliminar odor de urina de gato',k:'Higiene',m:'5 min',r:'O protocolo com enzimas que funciona em sofá e piso.'},
+{t:'Banho em casa sem estresse',k:'Higiene',m:'7 min',r:'Temperatura, produtos e manejo calmo em 6 passos.'}
+];
+const C=[
+{t:'Melhores rações custo-benefício',h:['Produto','Nota','Preço','Ideal para'],r:[['Super premium','4,8','R$ 189,90','Cães ativos'],['Premium frango e arroz','4,6','R$ 129,90','Rotina diária'],['Natural sem grãos','4,5','R$ 219,00','Alergias'],['Econômica','4,2','R$ 79,90','Orçamento curto']]},
+{t:'Melhores coleiras antipulgas',h:['Produto','Nota','Duração','Preço'],r:[['Coleira 8 meses cães','4,7','8 meses','R$ 79,90'],['Coleira 5 meses gatos','4,6','5 meses','R$ 69,90'],['Repelente natural','4,3','4 meses','R$ 49,90']]}
+];
+const V=()=>document.getElementById('v');
+const go=h=>{location.hash=h;document.getElementById('nv').classList.remove('on')};
+const st=v=>'★'.repeat(Math.round(v))+'☆'.repeat(5-Math.round(v));
+const card=p=>`<article class="cd"><div class="pc" style="background:${p.c}"><i class="fa-solid ${p.i}"></i></div>${p.d?'<span class="ds">Mais vendido</span>':''}<h3>${p.t}</h3><span class="tg">${p.k}</span><div class="st">${st(p.v)} ${p.v}</div><p style="font-size:13px">${p.r}</p><div class="pr">${p.p}</div><a class="bt am" href="${L[p.l]}" target="_blank" rel="sponsored nofollow"><i class="fa-solid fa-cart-shopping"></i> Ver oferta</a></article>`;
+const guiaCard=g=>`<article class="cd"><span class="tg">${g.k}</span><h3 style="margin-top:6px">${g.t}</h3><p style="font-size:13px">${g.r}</p><span style="font-size:12px;color:var(--mu)">${g.m} de leitura</span></article>`;
+function nav(){document.getElementById('nv').innerHTML=N.map(([h,t])=>`<a onclick="go('${h}')" class="${location.hash==h?'on':''}">${t}</a>`).join('')}
+function home(){V().innerHTML=`<section class="s"><div class="w"><div class="eb">Guias · Reviews · Comparativos</div><h1>Todo pet merece a escolha certa.</h1><p style="max-width:560px">Comparamos os produtos que mais importam na rotina do seu cão ou gato para você decidir em minutos, sem gastar a mais.</p><p style="margin-top:20px"><a class="bt" onclick="go('#/reviews')"><i class="fa-solid fa-list-check"></i> Ver os produtos</a> <a class="bt gh" onclick="go('#/guias')"><i class="fa-solid fa-book-open"></i> Ler os guias</a></p><div class="gd" style="margin-top:26px"><div class="mt"><b>10</b><span>produtos avaliados</span></div><div class="mt"><b>5</b><span>guias completos</span></div><div class="mt"><b>2</b><span>comparativos</span></div></div></div></section><div class="w"><div class="ad">Espaço para anúncio · cole aqui o AdSense</div></div><section class="s"><div class="w"><div class="eb">Seleção do mês</div><h2>Mais recomendados</h2><div class="gd">${P.filter(p=>p.d).map(card).join('')}</div><p style="margin-top:20px"><a class="bt gh" onclick="go('#/reviews')">Ver catálogo completo</a></p></div></section><section class="s"><div class="w"><div class="eb">Comece por aqui</div><h2>Guias que resolvem</h2><div class="gd">${G.slice(0,3).map(guiaCard).join('')}</div></div></section><section class="s"><div class="w"><h2>Uma dica por semana</h2><p>Deixe seu e-mail e receba conteúdo novo antes de todo mundo.</p><div class="ns"><input id="em" placeholder="seu@email.com"><button class="bt" onclick="if(document.getElementById('em').value)document.getElementById('okn').style.display='block'">Quero receber</button><div id="okn" style="display:none;color:var(--ac);font-size:13px">Pronto, você está na lista.</div></div></div></section>`}
+function rev(){V().innerHTML=`<section class="s"><div class="w"><div class="eb">Catálogo</div><h1>Reviews e recomendações</h1><p style="max-width:560px">Todos os produtos avaliados, com nota e faixa de preço. Os links são de afiliado — você não paga nada a mais.</p></div></section><div class="w"><div class="ad">Espaço para anúncio</div></div><section class="s"><div class="w"><div class="gd">${P.map(card).join('')}</div></div></section>`}
+function gui(){V().innerHTML=`<section class="s"><div class="w"><div class="eb">Conteúdo</div><h1>Guias e cuidados</h1><p style="max-width:560px">Textos que respondem às dúvidas reais de quem tem pet. É isso que traz tráfego do Google todos os dias.</p></div></section><div class="w"><div class="ad">Espaço para anúncio</div></div><section class="s"><div class="w"><div class="gd">${G.map(guiaCard).join('')}</div></div></section>`}
+function cmp(){V().innerHTML=`<section class="s"><div class="w"><div class="eb">Decisão rápida</div><h1>Comparativos</h1><p style="max-width:560px">Tabelas diretas para quem já decidiu comprar e só precisa escolher.</p></div></section><div class="w"><div class="ad">Espaço para anúncio</div></div>${C.map(c=>`<section class="s"><div class="w"><h2>${c.t}</h2><table><thead><tr>${c.h.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${c.r.map(r=>`<tr>${r.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('')}</tbody></table><p style="margin-top:16px"><a class="bt" href="${L.amz}" target="_blank" rel="sponsored nofollow">Ver preços</a></p></div></section>`).join('')}`}
+function sob(){V().innerHTML=`<section class="s"><div class="w"><div class="eb">Quem escreve</div><h1>Sobre</h1><p style="max-width:600px">Site independente de reviews e guias para tutores de cães e gatos. Reunimos o que alguém precisa saber antes de comprar ou cuidar, sem textão e sem propaganda disfarçada.</p><h2 style="margin-top:30px">Transparência</h2><div class="rw"><span>Divulgação de afiliados</span><span>sim</span></div><div class="rw"><span>Anúncios sinalizados</span><span>sim</span></div><div class="rw"><span>Opinião vendida para marca</span><span>não</span></div><p class="nt">Ao comprar por um link do site, a loja paga comissão. O preço para você continua o mesmo.</p></div></section>`}
+function pri(){V().innerHTML=`<section class="s"><div class="w"><div class="eb">Legal</div><h1>Privacidade</h1><p>Coletamos apenas dados básicos de navegação e o e-mail informado na newsletter.</p><h2 style="margin-top:26px">Cookies e anúncios</h2><p>Usamos cookies próprios e de terceiros. O Google e seus parceiros podem usar cookies para exibir anúncios com base nas suas visitas.</p><h2 style="margin-top:26px">Links de afiliados</h2><p>Ao clicar e comprar, a loja parceira pode registrar cookies para atribuir a comissão. O preço não muda para você.</p><h2 style="margin-top:26px">LGPD</h2><p>Você pode pedir acesso, correção ou exclusão dos seus dados pelo e-mail de contato.</p></div></section>`}
+function con(){V().innerHTML=`<section class="s"><div class="w"><div class="eb">Fale com a gente</div><h1>Contato</h1><p style="max-width:560px">Dúvida sobre um produto, sugestão de pauta ou parceria.</p><div class="ns" style="flex-direction:column;align-items:stretch"><input id="ce" placeholder="Seu e-mail"><textarea id="cm" rows="4" placeholder="Sua mensagem"></textarea><button class="bt" style="align-self:flex-start" onclick="if(document.getElementById('ce').value)document.getElementById('okc').style.display='block'">Enviar</button><div id="okc" style="display:none;color:var(--ac);font-size:13px">Mensagem registrada.</div></div></div></section><section class="s"><div class="w"><h2>Canais</h2><div class="rw"><span>E-mail</span><span>contato@petescolha.com</span></div><div class="rw"><span>Parcerias</span><span>parcerias@petescolha.com</span></div></div></section>`}
+const R={'#/':home,'#/reviews':rev,'#/guias':gui,'#/comparar':cmp,'#/sobre':sob,'#/privacidade':pri,'#/contato':con};
+function route(){const h=R[location.hash]?location.hash:'#/';nav();R[h]()}
+window.addEventListener('hashchange',route);
+document.getElementById('ano').textContent=new Date().getFullYear();
+route();
+</script>
+</body>
+                          </html>
